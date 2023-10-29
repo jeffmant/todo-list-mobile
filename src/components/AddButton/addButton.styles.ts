@@ -9,9 +9,6 @@ export const styles = {
         padding: 16,
         top: -50,
         marginLeft: 4,
-        '&:active': {
-            backgroundColor: colors.blue,
-        }
     },
     buttonIcon: {
         width: 20,

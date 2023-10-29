@@ -1,13 +1,9 @@
 export const typography = {
-    fontFamily: 'Inter_900Black',
+    bold: 'Inter_900Black',
+    regular: 'Inter_400Regular',
     fontSize: {
         small: 12,
         medium: 14,
         large: 16
     },
-    fontWeight: {
-        regular: '400',
-        bold: '700'
-    } as any,
-    lineWeight: '140%'
 }
