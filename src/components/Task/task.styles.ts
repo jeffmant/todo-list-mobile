@@ -21,6 +21,10 @@ export const styles = {
         marginLeft: 16,
         textAlign: 'left',
     } as any,
+    checkedText: {
+      textDecorationLine: 'line-through', 
+      textDecorationStyle: 'solid'
+    },
     icon: {
         width: 32,
         height: 32,

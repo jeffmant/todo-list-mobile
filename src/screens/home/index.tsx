@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { Alert, View } from "react-native";
 import { styles } from "./home.styles";
 import { Input } from "../../components/Input";
 import { AddButton } from "../../components/AddButton";
@@ -16,6 +16,36 @@ export function Home() {
       setNewTask('')
     }
 
+    function handleCheck (taskId: number) {
+      const filteredTasks = tasks.map((task) => {
+        let updatedTask
+        
+        if (task.id === taskId) {
+          updatedTask = { ...task, isChecked: !task.isChecked }
+        }
+
+        return updatedTask || task
+      })
+
+      setTasks(filteredTasks)
+    }
+
+    function handleDelete (taskId: number) {
+      Alert.alert('Excluir', `Deseja excluir esta tarefa?`, [
+        {
+          text: 'Sim',
+          onPress: () => {
+            const filteredTasks = tasks.filter((task: TaskType) => task.id !== taskId)
+            setTasks(filteredTasks)
+          },
+        },
+        {
+          text: 'Não',
+          style: 'cancel'
+        }
+      ])
+    }
+
     return (
 			<>
 				<Header />
@@ -25,7 +55,7 @@ export function Home() {
 							<AddButton onPress={handleAddTask} />
 						</View>
 						<View>
-              <TaskList tasks={tasks} />
+              <TaskList tasks={tasks} handleCheck={handleCheck} handleDelete={handleDelete} />
 						</View>
         </View>
 			</>

@@ -3,16 +3,19 @@ import { styles } from "./task.styles";
 import { Checkbox } from "../Checkbox";
 import { TaskType } from "../../types/task";
 
-export function Task({ id, title, isChecked }: TaskType) {
+export function Task(
+  { task, handleCheck, handleDelete }: 
+  { task: TaskType, handleCheck: () => void, handleDelete: () => void }
+) {
     return (
         <View style={styles.container}>
-            <Checkbox isChecked={isChecked} />
+            <Checkbox handleCheck={handleCheck} isChecked={task.isChecked} />
             
-            <Text style={styles.text}>
-                {title}
+            <Text style={task.isChecked ? { ...styles.text, ...styles.checkedText} : styles.text}>
+                {task.title}
             </Text>
 
-            <TouchableOpacity  style={styles.icon}>
+            <TouchableOpacity onPress={handleDelete} style={styles.icon}>
                 <Image source={require('../../../assets/icons/trash-red.png')} />
             </TouchableOpacity>
         </View>
