@@ -1,14 +1,15 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./task.styles";
 import { Checkbox } from "../Checkbox";
+import { TaskType } from "../../types/task";
 
-export function Task({ task }: { task: { id: number, title: string, isChecked: boolean } }) {
+export function Task({ id, title, isChecked }: TaskType) {
     return (
         <View style={styles.container}>
-            <Checkbox isChecked={task.isChecked} />
+            <Checkbox isChecked={isChecked} />
             
             <Text style={styles.text}>
-                {task.title}
+                {title}
             </Text>
 
             <TouchableOpacity  style={styles.icon}>
