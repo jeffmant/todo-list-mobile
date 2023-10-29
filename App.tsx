@@ -1,5 +1,6 @@
-import { StatusBar, Text } from 'react-native';
+import { StatusBar } from 'react-native';
 import { useFonts } from 'expo-font';
+import { Home } from './src/screens/home';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -17,14 +18,7 @@ export default function App() {
         backgroundColor={'transparent'} 
         translucent
         />
-      <Text 
-        style={{ 
-          fontFamily: 'Inter', 
-          padding: 24, 
-          marginTop: 24 
-        }}> 
-        Hello World 
-      </Text>
+      <Home />
     </>
   );
 }
