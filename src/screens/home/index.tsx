@@ -1,12 +1,13 @@
-import { View } from "react-native";
+import { Image, View } from "react-native";
 import { styles } from "./home.styles";
 import { Input } from "../../components/Input";
 import { AddButton } from "../../components/AddButton";
+import { Header } from "../../components/Header";
 
 export function Home() {
     return (
 			<>
-        <View style={styles.head} />
+				<Header />
         <View style={styles.container}>
 						<View style={styles.form}>
 							<Input />
