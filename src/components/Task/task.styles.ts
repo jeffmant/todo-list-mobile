@@ -19,7 +19,7 @@ export const styles = {
         flexShrink: 1,
         marginRight: 16,
         marginLeft: 16,
-        textAlign: 'justify'
+        flexWrap: 'wrap',
     } as any,
     icon: {
         width: 32,

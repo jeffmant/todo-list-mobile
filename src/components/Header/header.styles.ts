@@ -15,7 +15,7 @@ export const styles = {
         marginRight: 8
     },
     title: {
-        fontFamily: typography.fontFamily,
+        fontFamily: typography.bold,
         fontWeight: 'bold',
         fontSize: 32,
     } as any,
