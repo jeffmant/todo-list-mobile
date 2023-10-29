@@ -20,15 +20,19 @@ export function Home() {
     }
 
     function handleCheck (taskId: number) {
-      const filteredTasks = tasks.map((task) => {
-        let updatedTask
-        
-        if (task.id === taskId) {
-          updatedTask = { ...task, isChecked: !task.isChecked }
-        }
+      let filteredTasks = [ ...tasks ]
+      const foundTask = tasks.find((task: TaskType) => task.id === taskId)
 
-        return updatedTask || task
-      })
+      if (foundTask) {
+        foundTask.isChecked = !foundTask.isChecked
+        filteredTasks = filteredTasks.filter((task: TaskType) => task.id !== taskId)
+
+        if (foundTask.isChecked) {
+          filteredTasks.push(foundTask)
+        } else {
+          filteredTasks.unshift(foundTask)
+        }
+      }
 
       setTasks(filteredTasks)
     }
