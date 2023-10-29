@@ -12,7 +12,7 @@ export const colors = {
 		danger: '#E25858',
 	},
 	blue: '#4EA8DE',
-	blueDark: '#1D4ED8',
+	blueDark: '#1E6F9F',
 	purple: '#8284FA',
 	purpleDark: '#5E60CE',
 }

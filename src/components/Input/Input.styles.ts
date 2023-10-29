@@ -9,7 +9,7 @@ export const styles = {
     height: 54,
     borderRadius: 8,
     padding: 16,
-    top: -50
+    top: -50,
   },
   filledInput: {
     borderColor: colors.purpleDark,
