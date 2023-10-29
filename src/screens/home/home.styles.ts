@@ -1,4 +1,4 @@
-import { colors, typography } from "../../styles";
+import { colors } from "../../styles";
 
 export const styles = {
     container: {
@@ -14,10 +14,10 @@ export const styles = {
         height: 173,
         width: '100%'
     } as any,
-    title: {
-        fontSize: 24,
-        color: colors.base.gray100,
-        fontWeight: typography.fontWeight.bold,
-        marginBottom: 16
-    }
+    form: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        paddingRight: 16,
+        paddingLeft: 16,
+    } as any
 }
