@@ -3,7 +3,7 @@ import { colors, typography } from "../../styles";
 export const styles = {
     container: {
         flex: 1,
-        backgroundColor: colors.background,
+        backgroundColor: colors.base.gray600,
         padding: 24,
     },
     head: {

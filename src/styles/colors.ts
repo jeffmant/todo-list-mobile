@@ -11,7 +11,6 @@ export const colors = {
 	feedback: {
 		danger: '#E25858',
 	},
-	background: '#131016',
 	blue: '#4EA8DE',
 	blueDark: '#1D4ED8',
 	purple: '#8284FA',
