@@ -4,7 +4,11 @@ export const styles = {
   listEmpty: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    borderStyle: 'solid',
+    borderTopWidth: 0.5,
+    borderTopColor: colors.base.gray300,
+    paddingTop: 32
   } as any,
   listEmptyIcon: {
     width: 56,
