@@ -1,4 +1,4 @@
-import { Alert, View } from "react-native";
+import { Alert, StyleSheet, Text, View } from "react-native";
 import { styles } from "./home.styles";
 import { Input } from "../../components/Input";
 import { AddButton } from "../../components/AddButton";
@@ -6,6 +6,7 @@ import { Header } from "../../components/Header";
 import { TaskList } from "../../components/TaskList";
 import { useState } from "react";
 import { TaskType } from "../../types/task";
+import { TaskCount } from "../../components/TaskCount";
 
 export function Home() {
     const [tasks, setTasks] = useState<TaskType[]>([])
@@ -54,8 +55,9 @@ export function Home() {
         <View style={styles.container}>
 						<View style={styles.form}>
 							<Input value={newTask} placeholder="Adicione uma nova tarefa" onChange={setNewTask} />
-							<AddButton onPress={handleAddTask} />
+							<AddButton disabled={!newTask} onPress={handleAddTask} />
 						</View>
+            <TaskCount todo={tasks.filter(task => !task.isChecked).length} done={tasks.filter(task => task.isChecked).length} />
 						<View>
               <TaskList tasks={tasks} handleCheck={handleCheck} handleDelete={handleDelete} />
 						</View>
