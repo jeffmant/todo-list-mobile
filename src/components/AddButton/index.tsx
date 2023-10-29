@@ -1,5 +1,5 @@
 import { Image, TouchableOpacity } from "react-native";
-import { styles } from "./addButton.styles";
+import * as styles  from "./addButton.styles";
 
 export function AddButton({ disabled, onPress }: { disabled: boolean, onPress: () => void }) {
     return (

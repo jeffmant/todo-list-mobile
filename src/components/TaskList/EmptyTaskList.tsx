@@ -1,5 +1,5 @@
 import { Image, Text, View } from "react-native";
-import { styles } from "./taskList.styles";
+import * as styles from "./taskList.styles";
 
 export function EmptyTaskList() {
   return (

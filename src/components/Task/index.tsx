@@ -1,5 +1,5 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
-import { styles } from "./task.styles";
+import * as styles from "./task.styles";
 import { Checkbox } from "../Checkbox";
 import { TaskType } from "../../types/task";
 
@@ -11,7 +11,11 @@ export function Task(
         <View style={styles.container}>
             <Checkbox handleCheck={handleCheck} isChecked={task.isChecked} />
             
-            <Text style={task.isChecked ? { ...styles.text, ...styles.checkedText} : styles.text}>
+            <Text style={
+              task.isChecked ? 
+              styles.checkedText : 
+              styles.text
+            }>
                 {task.title}
             </Text>
 
