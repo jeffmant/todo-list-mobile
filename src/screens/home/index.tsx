@@ -12,7 +12,9 @@ export function Home() {
     const [newTask, setNewTask] = useState('')
 
     function handleAddTask () {
-      setTasks([...tasks, { id: tasks.length + 1, title: newTask, isChecked: false }])
+      const updatedTasks = [ ...tasks ]
+      updatedTasks.unshift({ id: Math.random() * (1000 - 1) + 1, title: newTask, isChecked: false })
+      setTasks(updatedTasks)
       setNewTask('')
     }
 
