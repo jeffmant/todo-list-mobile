@@ -3,7 +3,7 @@ import { colors, typography } from "../../styles";
 export const styles = {
   input: {
     backgroundColor: colors.base.gray500,
-    fontFamily: typography.fontFamily,
+    fontFamily: typography.regular,
     color: colors.base.gray100,
     width: '100%' as any,
     height: 54,
