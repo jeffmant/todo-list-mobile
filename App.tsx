@@ -1,13 +1,13 @@
 import { StatusBar } from 'react-native';
-import { useFonts } from 'expo-font';
 import { Home } from './src/screens/home';
+import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    'Inter': require('./assets/fonts/Inter.ttf'),
+  let [fontsLoaded, fontError] = useFonts({
+    Inter_900Black,
   });
 
-  if (!fontsLoaded) {
+  if (!fontsLoaded && !fontError) {
     return null;
   }
 

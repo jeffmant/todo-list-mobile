@@ -1,5 +1,5 @@
 export const typography = {
-    fontFamily: 'Inter',
+    fontFamily: 'Inter_900Black',
     fontSize: {
         small: 12,
         medium: 14,
